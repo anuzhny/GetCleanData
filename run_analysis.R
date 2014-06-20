@@ -63,4 +63,4 @@ aggdata <-aggregate(data5, by=list(subject = data5$subject_id, activity = data5$
 drops <- c("subject","activity")
 aggdata <- aggdata[,!(names(aggdata) %in% drops)]
 aggdata = merge(aggdata, activity_labels)
-write.csv(file="submit.csv", x=aggdata)
+write.csv(file="submit.txt", x=aggdata)
